@@ -1,4 +1,73 @@
-.App {
+.canvas{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.day{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.night{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .moon{
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  background: #D1D7E5;
+  position: absolute;
+} */
+
+.moon {
+  position: absolute;
+  /* left: 40%;
+  bottom: 300px; */
+  margin: auto;
+  width: 170px;
+  height: 170px;
+  background: transparent;
+  z-index: -6;
+}
+
+/* moon background to hide grneated stars behind of the moon */
+.moon:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ffffff;
+  opacity: 1;
+  box-shadow: 0px 0px 50px 0px #fff;
+  z-index: -7;
+  -webkit-animation: glowing 1.5s  linear infinite;
+  -moz-animation: glowing 1.5s  linear infinite alternate;
+  -ms-animation: glowing 1.5s  linear infinite alternate;
+  -o-animation: glowing 1.5s  linear infinite alternate;
+  animation: glowing 1.5s linear infinite alternate;
+}
+
+.texture-moon{
+  /* width: 40px;
+  height: 40px; */
+  background: #e2e2e3;
+  border-radius: 50%;
+  position: absolute;
+  /* top: 30px;
+  left: 120px; */
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +104,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
